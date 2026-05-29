@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Home Kitchen – Catering Service</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<!-- Hero -->
+<header class="hero">
+  <div class="hero-logo">🍲</div>
+  <h1>Home Kitchen</h1>
+  <p class="hero-sub">Catering Service · Mrs. Mudassar Khan</p>
+  <div class="hero-badges">
+    <span class="badge">🏠 Home Cooked</span>
+    <span class="badge">👥 Up to 40–50 Persons</span>
+    <span class="badge">⏰ 3–4 Days Advance Notice</span>
+    <span class="badge">💰 Min. Order 100 AED</span>
+  </div>
+</header>
+
+<!-- Sticky Nav -->
+<nav class="sticky-nav" id="stickyNav">
+</nav>
+
+<!-- Main -->
+<main class="main-wrap">
+  <!-- Search -->
+  <div class="search-bar">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search any dish…" oninput="filterItems(this.value)"/>
+  </div>
+
+  <!-- Sections -->
+  <div id="menu-container">
+    <!-- Menu items will be injected here by JavaScript -->
+  </div>
+</main>
+
+<!-- Info Bar -->
+<footer class="info-bar">
+  <div class="info-item">
+    <strong>📞 Call / WhatsApp</strong>
+    <a class="contact-link" href="tel:0567141845">056 714 1845</a>
+  </div>
+  <div class="info-item">
+    <strong>👩‍🍳 Contact</strong>
+    <span>Mrs. Mudassar Khan</span>
+  </div>
+  <div class="info-item">
+    <strong>💰 Minimum Order</strong>
+    <span>AED 100</span>
+  </div>
+  <div class="info-item">
+    <strong>⏰ Advance Notice</strong>
+    <span>3–4 Days</span>
+  </div>
+</footer>
+
+<!-- Cart FAB -->
+<button class="cart-fab" id="cartFab" onclick="toggleCart()" title="View Order">
+  🛒
+  <span class="cart-badge hidden" id="cartBadge">0</span>
+</button>
+
+<!-- Overlay -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+<!-- Cart Drawer -->
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-header">
+    <h2>🛒 Your Order</h2>
+    <button class="close-btn" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-body" id="cartBody">
+    <div class="cart-empty">
+      <div class="big">🍽️</div>
+      Your order is empty.<br/>Browse the menu and add items!
+    </div>
+  </div>
+  <div class="cart-footer">
+    <div class="cart-total-row">
+      <span>Total</span>
+      <span class="total-amount" id="cartTotal">AED 0</span>
+    </div>
+    <p class="cart-note">Min. order AED 100 · 3-4 days advance notice required</p>
+    <a href="/cart.html" class="order-btn" id="orderBtn" disabled>
+      📱 Place Order
+    </a>
+  </div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="/js/menu-data.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>

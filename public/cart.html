@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Home Kitchen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/cart.css">
+</head>
+<body>
+    <header class="hero">
+        <div class="hero-logo">🛒</div>
+        <h1>Review Your Order</h1>
+        <p class="hero-sub">Finalize your selections before placing the order</p>
+    </header>
+
+    <main class="main-wrap">
+        <div class="cart-container">
+            <div id="cart-items-container"></div>
+            <div class="cart-summary">
+                <h2>Summary</h2>
+                <div class="summary-row">
+                    <span>Subtotal</span>
+                    <span id="summary-subtotal">AED 0</span>
+                </div>
+                <div class="summary-row">
+                    <span>Delivery</span>
+                    <span>AED 0</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total</span>
+                    <span id="summary-total">AED 0</span>
+                </div>
+
+                <div class="customer-details">
+                    <h2>Your Details</h2>
+                    <div class="form-group">
+                        <label for="customerName">Name</label>
+                        <input type="text" id="customerName" placeholder="Your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPhone">Phone</label>
+                        <input type="tel" id="customerPhone" placeholder="Your contact number">
+                    </div>
+                </div>
+
+                <button id="place-order-btn" class="order-btn-large" disabled>Place Order</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="info-bar">
+        <div class="info-item">
+          <strong>📞 Call / WhatsApp</strong>
+          <a class="contact-link" href="tel:0567141845">056 714 1845</a>
+        </div>
+        <div class="info-item">
+          <strong>👩‍🍳 Contact</strong>
+          <span>Mrs. Mudassar Khan</span>
+        </div>
+      </footer>
+
+    <div class="toast" id="toast"></div>
+
+    <script src="/js/menu-data.js"></script>
+    <script src="/js/cart-page.js"></script>
+</body>
+</html>
