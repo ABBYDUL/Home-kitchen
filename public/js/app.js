@@ -7,8 +7,12 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    const menuOrder = ['veg_starters', 'veg_main', 'non_veg_starters', 'non_veg_main', 'non_veg_rice', 'desserts'];
+
     // Render navigation buttons
-    for (const [key, section] of Object.entries(MENU)) {
+    for (const key of menuOrder) {
+        const section = MENU[key];
+        if (!section) continue;
         stickyNav.innerHTML += `
             <button class="nav-btn" onclick="scrollToSection('${key}')" id="nav-${key}">
                 ${section.icon} ${section.label}
@@ -17,7 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Render menu sections and items
-    for (const [key, section] of Object.entries(MENU)) {
+    for (const key of menuOrder) {
+        const section = MENU[key];
+        if (!section) continue;
+        
         const sectionDiv = document.createElement('section');
         sectionDiv.className = 'section';
         sectionDiv.id = `sec-${key}`;
@@ -51,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
         sectionDiv.innerHTML = `
             <div class="section-header">
                 <div class="section-icon" style="background:${section.color}22;">${section.icon}</div>
-                 <h2 class="section-title">${section.label}</h2>
+                <h2 class="section-title">${section.label}</h2>
                 <span class="section-count" id="count-${key}">${section.dishes.length} items</span>
                 <button class="collapse-btn" id="collapse-btn-${key}">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
@@ -67,7 +74,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
     loadCart();
     // Initially, open the first section if it exists
-    const firstKey = Object.keys(MENU)[0];
+    const firstKey = menuOrder[0];
     if (firstKey) {
         // A slight delay ensures the initial animation is visible
         setTimeout(() => toggleSection(firstKey, false), 50);
