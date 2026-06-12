@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const menuOrder = ['veg_starters', 'veg_main', 'non_veg_starters', 'non_veg_main', 'non_veg_rice', 'desserts'];
+    const menuOrder = ['veg_starters', 'non_veg_starters', 'veg_main', 'non_veg_main', 'non_veg_rice', 'veg_frozen', 'non_veg_frozen', 'desserts'];
 
     // Render navigation buttons
     for (const key of menuOrder) {
