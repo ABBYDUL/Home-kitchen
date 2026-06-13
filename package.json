@@ -20,6 +20,8 @@
   "homepage": "https://github.com/ABBYDUL/Home-kitchen#readme",
   "dependencies": {
     "express": "^5.2.1",
+    "framer-motion": "^12.40.0",
+    "motion": "^12.40.0",
     "sqlite3": "^6.0.1"
   }
 }
