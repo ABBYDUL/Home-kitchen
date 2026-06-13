@@ -11,10 +11,23 @@
 </head>
 <body>
 
-    <header class="hero" style="align-items: center; text-align: center; justify-content: center;">
-        <!-- <div class="hero-logo" style="align-items: center; text-align: center; justify-content: center;">🍳</div> -->
-        <h1><a href="/" style="color:white; text-decoration: none;">Home Kitchen</a></h1>
-        <p class="hero-sub">Catering Service · Mrs. Mudassar Khan</p>
+    <header class="hero cart-hero">
+        <div class="hero-content-wrapper">
+            <div class="hero-left">
+                <h1><a href="/" style="color:white; text-decoration: none;">Home Kitchen</a></h1>
+                <p class="hero-sub">Catering Service · <strong>Mrs. Mudassar Khan</strong></p>
+            </div>
+            <div class="hero-right">
+                <div class="scrolling-carousel-container">
+                    <div class="scrolling-carousel-inner">
+                        <div class="carousel-item" style="background-image:url('images/salad.jpg');">Fresh</div>
+                        <div class="carousel-item" style="background-image:url('images/saffron.jpg');">Tasty</div>
+                        <div class="carousel-item" style="background-image:url('images/breading.jpg');">Authentic</div>
+                        <div class="carousel-item" style="background-image:url('images/dessert.jpg');">Delicious</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <main class="main-wrap">
@@ -31,7 +44,7 @@
             <!-- Summary will be injected here -->
         </div>
     </main>
-    
+
     <div class="toast" id="toast"></div>
 
     <script src="js/cart.js"></script>
