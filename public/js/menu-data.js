@@ -1,3 +1,5 @@
+
+
 const MENU = {
     "non_veg_rice": {
         "label": "Non-Veg Rice",
@@ -45,9 +47,12 @@ const MENU = {
         "color": "#e67e22",
         "dishes": [
             {"name": "Mutton Samosa", "qty": "12 pieces", "price": 40},
-            {"name": "Beef/Mutton Shami Kebab", "qty": "12 pieces", "price": 50},
-            {"name": "Beef/Mutton Resha Kebab", "qty": "12 pieces", "price": 50},
-            {"name": "Beef/Mutton Shami Fingers", "qty": "12 pieces", "price": 50},
+            {"name": "Beef Shami Kebab", "qty": "12 pieces", "price": 50},
+            {"name": "Mutton Shami Kebab", "qty": "12 pieces", "price": 50},
+            {"name": "Beef Resha Kebab", "qty": "12 pieces", "price": 50},
+            {"name": "Mutton Resha Kebab", "qty": "12 pieces", "price": 50},
+            {"name": "Beef Shami Fingers", "qty": "12 pieces", "price": 50},
+            {"name": "Mutton Shami Fingers", "qty": "12 pieces", "price": 50},
             {"name": "Chicken Shami Kebab", "qty": "12 pieces", "price": 50},
             {"name": "Chicken Croquets", "qty": "12 pieces", "price": 50},
             {"name": "Chicken Springrolls", "qty": "12 pieces", "price": 45},
@@ -58,7 +63,8 @@ const MENU = {
             {"name": "Chicken Cheese Candy", "qty": "12 pieces", "price": 40},
             {"name": "Chicken 65", "qty": "1 kg", "price": 70},
             {"name": "Chicken Majestic", "qty": "1 kg", "price": 70},
-            {"name": "Beef/Mutton Boti (Dry)", "qty": "1 kg", "price": 90},
+            {"name": "Beef Boti (Dry)", "qty": "1 kg", "price": 90},
+            {"name": "Mutton Boti (Dry)", "qty": "1 kg", "price": 90},
         ],
     },
     "non_veg_main": {
@@ -99,4 +105,33 @@ const MENU = {
             {"name": "Phirni", "qty": "per litre", "price": 50},
         ],
     },
+    "veg_frozen": {
+        "label": "Veg Frozen Items",
+        "icon": "🧊",
+        "color": "#2980b9",
+        "dishes": [
+            {"name": "Frozen Onion Samosa", "qty": "12 pieces", "price": 25},
+            {"name": "Frozen Paneer Springrolls", "qty": "12 pieces", "price": 35},
+            {"name": "Frozen Cutlets", "qty": "12 pieces", "price": 35},
+        ]
+    },
+    "non_veg_frozen": {
+        "label": "Non-Veg Frozen Items",
+        "icon": "🧊",
+        "color": "#e74c3c",
+        "dishes": [
+            {"name": "Frozen Mutton Samosa", "qty": "12 pieces", "price": 30},
+            {"name": "Frozen Chicken Springrolls", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Chicken Cutlets", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Chicken Tikka Samosa", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Chicken Pockets", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Chicken Croquettes", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Chicken Shami Kebab", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Shami Fingers", "qty": "12 pieces", "price": 45},
+            {"name": "Frozen Beef Shami Kebab", "qty": "12 pieces", "price": 45},
+            {"name": "Frozen Mutton Shami Kebab", "qty": "12 pieces", "price": 45},
+            {"name": "Frozen Beef Resha Kebab", "qty": "12 pieces", "price": 40},
+            {"name": "Frozen Mutton Resha Kebab", "qty": "12 pieces", "price": 40},
+        ]
+    }
 };

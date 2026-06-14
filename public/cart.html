@@ -12,7 +12,6 @@
 <body>
 
     <header class="hero" style="align-items: center; text-align: center; justify-content: center;">
-        <div class="hero-logo" style="align-items: center; text-align: center; justify-content: center;">🍳</div>
         <h1><a href="/" style="color:white; text-decoration: none;">Home Kitchen</a></h1>
         <p class="hero-sub">Catering Service · Mrs. Mudassar Khan</p>
     </header>
@@ -24,14 +23,79 @@
         </div>
 
         <div id="cart-container">
-            <!-- Cart items will be dynamically injected here -->
+            <!-- Cart items injected here -->
         </div>
 
-        <div class="cart-summary" id="cart-summary">
-            <!-- Summary will be injected here -->
+        <div class="delivery-preview-wrap">
+
+            <section class="delivery-section" id="delivery-section" style="display:none;">
+                <h2>Delivery Details</h2>
+                <form id="deliveryForm" class="delivery-form">
+
+                    <div class="form-row">
+                        <label for="address1">Address Line 1 *</label>
+                        <input type="text" id="address1" name="address1" placeholder="Street name and number" required />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="address2">Address Line 2</label>
+                        <input type="text" id="address2" name="address2" placeholder="Area, district (optional)" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="building">Building / Community Name *</label>
+                        <input type="text" id="building" name="building" placeholder="e.g. Al Nahda Towers" required />
+                    </div>
+
+                    <div class="form-row-group">
+                        <div class="form-row">
+                            <label for="floor">Floor</label>
+                            <input type="text" id="floor" name="floor" placeholder="e.g. 3" />
+                        </div>
+                        <div class="form-row">
+                            <label for="apt">Apartment / House Number *</label>
+                            <input type="text" id="apt" name="apt" placeholder="e.g. 204" required />
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="emirate">Emirate *</label>
+                        <select id="emirate" name="emirate" required>
+                            <option value="">Select Emirate</option>
+                            <option value="Abu Dhabi">Abu Dhabi</option>
+                            <option value="Dubai">Dubai</option>
+                            <option value="Sharjah">Sharjah</option>
+                            <option value="Ajman">Ajman</option>
+                            <option value="Umm Al Quwain">Umm Al Quwain</option>
+                            <option value="Ras Al Khaimah">Ras Al Khaimah</option>
+                            <option value="Fujairah">Fujairah</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label for="comment">Additional Comment (optional)</label>
+                        <textarea id="comment" name="comment" rows="3" placeholder="Any special instructions, allergies, or delivery notes..."></textarea>
+                    </div>
+
+                </form>
+            </section>
+
+            <section class="preview-section" id="preview-section" style="display:none;">
+                <h2>Message Preview</h2>
+                <div class="preview-bubble">
+                    <div class="preview-bubble-label">WhatsApp · Home Kitchen</div>
+                    <div class="preview-body" id="message-preview"></div>
+                </div>
+            </section>
+
         </div>
+
+        <div class="cart-summary" id="cart-summary" style="display:none;">
+            <!-- Summary injected here -->
+        </div>
+
     </main>
-    
+
     <div class="toast" id="toast"></div>
 
     <script src="js/cart.js"></script>

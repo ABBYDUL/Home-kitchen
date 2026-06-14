@@ -39,7 +39,7 @@ body {
 
 .hero-content-wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     max-width: 1100px;
     margin: 0 auto 32px auto;
@@ -48,14 +48,6 @@ body {
 
 .hero-left {
     flex-shrink: 0;
-}
-
-.hero-right {
-    flex-grow: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: translateY(15px);
 }
 
 .hero-logo {
